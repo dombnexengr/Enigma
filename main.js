@@ -96,18 +96,17 @@ client.on('voiceStateUpdate', (oldMember, newMember) => {
         // Welcome section
 
 client.on(`guildMemberAdd`, (member) => {
-
+    member.roles.add(`292271236552327168`)
     const channel = member.guild.channels.cache.get(`567484417556086784`)
     
         const embed = new Discord.MessageEmbed()
     .setColor('#00ff00')    
     .setTitle("New Member")    
     .setThumbnail(member.user.displayAvatarURL())
-    .addField(`**Welcome**`, `**Hello** <@${member.id}>, Welcome to our Family **EnigmaGamers&Projects**.`)
+    .addField(`**Welcome**`, `**Hello <@${member.id}>, Welcome to our Family EnigmaGamers&Projects**.`)
     .setFooter(`EnigmaGamers&Projects`, `https://i.imgur.com/KsMo8OG.png`)
     
     channel.send(embed)
-    member.roles.add(`292271236552327168`)
     });
 
 
