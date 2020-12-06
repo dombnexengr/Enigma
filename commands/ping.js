@@ -1,6 +1,5 @@
 const Discord = require("discord.js");
 
-module.exports.run = async (client, message, args) =>
 module.exports = {
       name: `ping`,
       description: `Just a "ping" command...`
