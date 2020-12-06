@@ -103,7 +103,7 @@ client.on(`guildMemberAdd`, (member) => {
     .setColor('#e7cb00')    
     .setTitle("New Member")    
     .setThumbnail(member.user.displayAvatarURL())
-    .addField(`**Welcome**`, `**Hello<@${member.id}>, Welcome to Our family ${guild.name}**`)
+    .addField(`**Welcome**`, `**Hello<@${member.id}>, Welcome to Our family EnigmaGamers&Projects**`)
     .setFooter(`EnigmaGamers&Projects`, `https://i.imgur.com/KsMo8OG.png`)
     
     channel.send(embed)
