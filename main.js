@@ -25,7 +25,7 @@ for(const file of commandFiles){
 
 client.once(`ready`, () => {
     console.log(`DombNexen bot is online`);
-    client.user.setActivity(`EnigmaProjectsgr.com`, {type: "STREAMING"})
+    client.user.setActivity(`EnigmaProjectsgr.com`, {type: "STREAMING", url: "https://www.twitch.tv/dombnexen"})
 });
 
         // Suggestion 
