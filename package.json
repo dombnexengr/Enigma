@@ -29,12 +29,5 @@
   },
   "repository": {
     "url": "https://github.com/dombnexengr/serverstats"
-  },
-  "license": "MIT",
-  "keywords": {
-    "node",
-    "serverstats",
-    "bot",
-    "discord"
   }
 }
