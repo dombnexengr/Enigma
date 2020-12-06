@@ -4,7 +4,7 @@ const Discord = require(`discord.js`)
 
 const client = new Discord.Client();
 
-const prefix = `s!`;
+const prefix = `!eg`;
 
 const fs = require(`fs`);
 
@@ -31,7 +31,7 @@ client.once(`ready`, () => {
         // Suggestion 
 
 client.on(`message`, async message => {
-    if (message.channel.id == 784909588268580914) {
+    if (message.channel.id == 784928947191152650) {
         if (message.author.bot) return;
         message.delete().catch(err => console.log(err));
         const suggestion = new Discord.MessageEmbed()
@@ -41,8 +41,8 @@ client.on(`message`, async message => {
         .setAuthor(`${message.author.username}`, message.author.avatarURL())
         .setFooter(`Enigma`, ``)
         let msgEmbed = await message.channel.send(suggestion);
-        await msgEmbed.react("👍");
-        await msgEmbed.react("👎");
+        await msgEmbed.react("✅");
+        await msgEmbed.react("❌");
     }
       });
 
@@ -69,27 +69,27 @@ client.on(`message`, message => {
     // Voice notification
 
 client.on('voiceStateUpdate', (oldMember, newMember) => {
-    const textChannel = newMember.guild.channels.cache.get(`696172381944676393`)
+    const textChannel = newMember.guild.channels.cache.get(`784932168119091260`)
     let newUserChannel = newMember.channelID
     let oldUserChannel = oldMember.channelID
 
-    if(newUserChannel === "699941941520891915") //don't remove ""
+    if(newUserChannel === "784931172223680532") //don't remove ""
     { 
         // User Joins a voice channel
 
-        textChannel.send(`**<@${newMember.id}> μπήκε στο Waiting For Support, κάποιος να πάει να τον εξυπηρετήσει <@&779850589927768105>.**`);
+        textChannel.send(`**<@${newMember.id}> μπήκε στο Waiting For Support, κάποιος να πάει να τον εξυπηρετήσει <@&752202985978986526>, <@&752203987901612073>.**`);
     }    
  });
  client.on('voiceStateUpdate', (oldMember, newMember) => {
-    const textChannel = newMember.guild.channels.cache.get(`696172381944676393`)
+    const textChannel = newMember.guild.channels.cache.get(`784932168119091260`)
     let newUserChannel = newMember.channelID
     let oldUserChannel = oldMember.channelID
 
-    if(newUserChannel === "782326452896006174") //don't remove ""
+    if(newUserChannel === "784931172223680532") //don't remove ""
     { 
         // User Joins a voice channel
 
-        textChannel.send(`**<@${newMember.id}> μπήκε στο Waiting For Interview, κάποιος να πάει να τον εξυπηρετήσει <@&699949128423047188>.**`);
+        textChannel.send(`**<@${newMember.id}> μπήκε στο Waiting For Interview, κάποιος να πάει να τον εξυπηρετήσει <@&752202985978986526>.**`);
     }    
  });
 
@@ -97,18 +97,18 @@ client.on('voiceStateUpdate', (oldMember, newMember) => {
 
 client.on(`guildMemberAdd`, (member) => {
 
-    const channel = member.guild.channels.cache.get(`744472184159731742`)
-    member.roles.add(`744343592117600296`)
+    const channel = member.guild.channels.cache.get(`567484417556086784`)
+    member.roles.add(`292271236552327168`)
         const embed = new Discord.MessageEmbed()
     .setColor('#e7cb00')    
     .setTitle("New Member")    
     .setThumbnail(member.user.displayAvatarURL())
-    .addField(`**Welcome**`, `**Γεια σου <@${member.id}>, καλωσόρισες στον Sniper Warz.**`)
-    .setFooter(`Enigma`, ``)
+    .addField(`**Welcome**`, `**Hello<@${member.id}>, Welcome to Our family ${guild}**`)
+    .setFooter(`EnigmaGamers&Projects`, `https://i.imgur.com/KsMo8OG.png`)
     
     channel.send(embed)
     
     });
 
 
-client.login('NzM4NzYwMzAwMzE2MzI3OTQ2.XyQmJQ.G4tIfnVsKUIViqCugEn07s_rrnw');
+client.login(process.env.token);
