@@ -101,11 +101,14 @@ client.on(`guildMemberAdd`, (member) => {
     member.roles.add(`292271236552327168`)
         const embed = new Discord.MessageEmbed()
     .setColor('#00ff00')    
-    .setTitle("New Member")    
+    .setTitle("ℕ𝕖𝕨 𝕄𝕖𝕞𝕓𝕖𝕣")    
+    .setURL("https://enigmaprojectsgr.com/")
+    .setDescription("Joined to our Family-Community")
+    .setAuthor("EnigmaProjects Bot", "https://i.imgur.com/KsMo8OG.png","https://enigmaprojectsgr.com/")
     .setThumbnail(member.user.displayAvatarURL())
     .addField(`**Welcome**`, `**Hello** <@${member.id}>, Welcome to Our family **EnigmaGamers&Projects**.`)
-    .setFooter(`EnigmaGamers&Projects`, `https://i.imgur.com/KsMo8OG.png`)
-    
+    .setFooter(`EnigmaProjectsgr.com`, `https://i.imgur.com/KsMo8OG.png`)
+    .setTimestamp()
     channel.send(embed)
     
     });
