@@ -39,7 +39,7 @@ client.on(`message`, async message => {
         .setTitle(`New suggestion`)
         .setDescription(message.content)
         .setAuthor(`${message.author.username}`, message.author.avatarURL())
-        .setFooter(`Enigma`, ``)
+        .setFooter(`EnigmaGamers&Projects`, `https://i.imgur.com/KsMo8OG.png`)
         let msgEmbed = await message.channel.send(suggestion);
         await msgEmbed.react("✅");
         await msgEmbed.react("❌");
