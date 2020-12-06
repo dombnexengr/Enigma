@@ -104,7 +104,7 @@ client.on(`guildMemberAdd`, (member) => {
     .setTitle("New Member")    
     .setThumbnail(member.user.displayAvatarURL())
     .addField(`**Welcome**`, `**Hello** <@${member.id}>, Welcome to Our family **EnigmaGamers&Projects**.`)
-    .setFooter(`EnigmaGamers&Projects`, `https://cdn.discordapp.com/icons/673261111025336350/ec8815d3fb9bef290508e4b8f5a14db8.jpg`)
+    .setFooter(`EnigmaGamers&Projects`, `https://i.imgur.com/KsMo8OG.png`)
     
     channel.send(embed)
     
