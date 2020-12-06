@@ -37,7 +37,7 @@ client.on(`message`, async message => {
         const suggestion = new Discord.MessageEmbed()
         .setColor(`#00ff00`)
         .setTitle(`New suggestion`)
-        .setDescription("```message.content```")
+        .setDescription("```${message.content}```")
         .setAuthor(`${message.author.username}`, message.author.avatarURL())
         .setFooter(`EnigmaGamers&Projects`, `https://i.imgur.com/KsMo8OG.png`)
         let msgEmbed = await message.channel.send(suggestion);
