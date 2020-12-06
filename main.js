@@ -100,10 +100,10 @@ client.on(`guildMemberAdd`, (member) => {
     const channel = member.guild.channels.cache.get(`567484417556086784`)
     member.roles.add(`292271236552327168`)
         const embed = new Discord.MessageEmbed()
-    .setColor('#e7cb00')    
+    .setColor('#00ff00')    
     .setTitle("New Member")    
     .setThumbnail(member.user.displayAvatarURL())
-    .addField(`**Welcome**`, `**Hello<@${member.id}>, Welcome to Our family EnigmaGamers&Projects**`)
+    .addField(`**Welcome**`, `**Hello** <@${member.id}>, Welcome to our Family **EnigmaGamers&Projects**.`)
     .setFooter(`EnigmaGamers&Projects`, `https://i.imgur.com/KsMo8OG.png`)
     
     channel.send(embed)
