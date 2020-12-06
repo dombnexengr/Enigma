@@ -98,7 +98,7 @@ client.on('voiceStateUpdate', (oldMember, newMember) => {
 client.on(`guildMemberAdd`, (member) => {
 
     const channel = member.guild.channels.cache.get(`567484417556086784`)
-    member.roles.add(`292271236552327168`)
+    
         const embed = new Discord.MessageEmbed()
     .setColor('#00ff00')    
     .setTitle("New Member")    
