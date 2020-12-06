@@ -103,7 +103,7 @@ client.on(`guildMemberAdd`, (member) => {
     .setColor('#00ff00')    
     .setTitle("New Member")    
     .setThumbnail(member.user.displayAvatarURL())
-    .addField(`**Welcome**`, `**Hello <@${member.id}>, welcome to enigma.**`)
+    .addField(`**Welcome**`, `**Hello** <@${member.id}>, Welcome to Our family **EnigmaGamers&Projects**.`)
     .setFooter(`Sniper Warz™`, `https://cdn.discordapp.com/icons/673261111025336350/ec8815d3fb9bef290508e4b8f5a14db8.jpg`)
     
     channel.send(embed)
