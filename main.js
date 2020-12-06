@@ -114,5 +114,15 @@ client.on(`guildMemberAdd`, (member) => {
     
     });
 
+        //ping
+module.exports = {
+        name: 'ping',
+        category: "info", 
+        discription: 'discription',
+        usage: "ping",
+        execute(message, args) {
+           message.channel.send(`🏓 | Latency is: **${Date.now() - message.createdTimestamp}ms.**`);
+        },
+    });
 
 client.login(process.env.token);
