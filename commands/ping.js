@@ -1,7 +1,10 @@
 const Discord = require("discord.js");
 
-module.exports.run = async (client, message, args) => {
-
+module.exports.run = async (client, message, args) =>
+module.exports = {
+      name: `ping`,
+      description: `Just a "ping" command...`
+      execute(client, message, args)
       message.channel.send("Pinging...").then(m => {
         let ping = m.createdTimestamp - message.createdTimestamp
         
