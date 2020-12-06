@@ -107,7 +107,7 @@ client.on(`guildMemberAdd`, (member) => {
     .setFooter(`EnigmaGamers&Projects`, `https://i.imgur.com/KsMo8OG.png`)
     
     channel.send(embed)
-    
+    member.roles.add(`292271236552327168`)
     });
 
 
