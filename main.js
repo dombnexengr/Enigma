@@ -24,8 +24,8 @@ for(const file of commandFiles){
 
 
 client.once(`ready`, () => {
-    console.log(`SniperWarz bot is online`);
-    client.user.setActivity(`Sniper Warz [GR]`, {type: "PLAYING"})
+    console.log(`DombNexen bot is online`);
+    client.user.setActivity(`EnigmaProjectsgr.com`, {type: "STREAMING"})
 });
 
         // Suggestion 
