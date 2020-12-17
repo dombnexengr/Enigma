@@ -8,6 +8,11 @@ const prefix = `!eg`;
 
 const fs = require(`fs`);
 
+const memberCounter = require('./counters/member-counter');
+const boostCounter = require(`./counters/boost-counter`);
+const dateCounter = require(`./counters/date-counter`);
+const creationCounter = require(`./counters/creation-counter`);
+
 const moment = require('moment');
 
 const config = require("./config.json");
@@ -27,7 +32,11 @@ for(const file of commandFiles){
 
 client.once(`ready`, () => {
     console.log(`DombNexen bot is online`);
-    client.user.setActivity(`EnigmaProjectsgr.com`, {type: "STREAMING", url: "https://www.twitch.tv/dombnexen"})
+    client.user.setActivity(`EnigmaProjectsgr.com`, {type: "STREAMING", url: "https://www.twitch.tv/dombnexen"});
+    memberCounter(client);
+    dateCounter(client);
+    boostCounter(client);
+    creationCounter(client); 
 });
 
         // Suggestion 
@@ -44,8 +53,8 @@ client.on(`message`, async message => {
         .setFooter(`EnigmaGamers&Projects`, `https://i.imgur.com/KsMo8OG.png`)
         .setTimestamp()
         let msgEmbed = await message.channel.send(suggestion);
-        await msgEmbed.react("✅");
-        await msgEmbed.react("❌");
+        await msgEmbed.react("👍");
+        await msgEmbed.react("👎");
     }
       });
 
@@ -67,7 +76,12 @@ client.on(`message`, message => {
         client.commands.get(`reject-suggestion`).run(message, args);
     } else if (command === `dm`){
         client.commands.get(`dm`).run(message, args);
+    } else if (command === `lock`){
+        client.commands.get(`lock`).execute(message, args);
+    } else if (command === `unlock`){
+        client.commands.get(`unlock`).execute(message, args);
     }
+       
 })
     // Voice notification
 
@@ -115,7 +129,7 @@ client.on(`guildMemberAdd`, (member) => {
     channel.send(embed)
     
     });
-	
+
 client.on('message', message => {
 
     if (message.content === '!egping') {
@@ -123,6 +137,6 @@ client.on('message', message => {
        message.channel.send(`🃏 | Latency is: **${Date.now() - message.createdTimestamp}ms.**`);
        }
 
-    });
+ });
 
 client.login(config.token);
