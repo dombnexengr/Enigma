@@ -10,6 +10,8 @@ const fs = require(`fs`);
 
 const moment = require('moment');
 
+const config = require("./config.json");
+
 client.commands = new Discord.Collection();
 
 const commandFiles = fs.readdirSync(`./commands/`).filter(file => file.endsWith(`.js`));
@@ -113,5 +115,14 @@ client.on(`guildMemberAdd`, (member) => {
     channel.send(embed)
     
     });
+	
+client.on('message', message => {
 
-client.login(process.env.token);
+    if (message.content === '!egping') {
+
+       message.channel.send(`🃏 | Latency is: **${Date.now() - message.createdTimestamp}ms.**`);
+       }
+
+    });
+
+client.login(config.token);
