@@ -1,3 +1,3 @@
 # Enigma
-Enigma's DombNexen Bot
+Enigma's EnigmaBot
 by GiorgosEmpiros Of Enigma
