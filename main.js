@@ -32,7 +32,7 @@ for(const file of commandFiles){
 
 client.once(`ready`, () => {
     console.log(`DombNexen bot is online`);
-    client.user.setActivity(`EnigmaProjectsgr.com`, {type: "STREAMING", url: "https://www.twitch.tv/dombnexen"});
+    client.user.setActivity(`EnigmaProjectsgr.com`, {type: "STREAMING", url: "twitch_channel_url_here"});
     memberCounter(client);
     dateCounter(client);
     boostCounter(client);
@@ -42,7 +42,7 @@ client.once(`ready`, () => {
         // Suggestion 
 
 client.on(`message`, async message => {
-    if (message.channel.id == 784928947191152650) {
+    if (message.channel.id == Suggestiong_Channel_Id_Here) {
         if (message.author.bot) return;
         message.delete().catch(err => console.log(err));
         const suggestion = new Discord.MessageEmbed()
@@ -83,30 +83,30 @@ client.on(`message`, message => {
     }
        
 })
-    // Voice notification
+    // Voice Support notification
 
 client.on('voiceStateUpdate', (oldMember, newMember) => {
-    const textChannel = newMember.guild.channels.cache.get(`784932168119091260`)
+    const textChannel = newMember.guild.channels.cache.get(`Text_Notification_Channel_Id_Here`)
     let newUserChannel = newMember.channelID
     let oldUserChannel = oldMember.channelID
 
-    if(newUserChannel === "784931172223680532") //don't remove ""
+    if(newUserChannel === "Voice_Channel_Id_Here") //don't remove ""
     { 
         // User Joins a voice channel
 
-        textChannel.send(`**<@${newMember.id}> μπήκε στο Waiting For Support, κάποιος να πάει να τον εξυπηρετήσει <@&752202985978986526>, <@&752203987901612073>.**`);
+        textChannel.send(`**<@${newMember.id}> μπήκε στο Waiting For Support, κάποιος να πάει να τον εξυπηρετήσει <@&Role_Admin_Id_Here>, <@&Role_Mod_Id_Here>.**`);
     }    
  });
  client.on('voiceStateUpdate', (oldMember, newMember) => {
-    const textChannel = newMember.guild.channels.cache.get(`784932168119091260`)
+    const textChannel = newMember.guild.channels.cache.get(`Text_Notification_Channel_Id_Here`)
     let newUserChannel = newMember.channelID
     let oldUserChannel = oldMember.channelID
 
-    if(newUserChannel === "784931783875231794") //don't remove ""
+    if(newUserChannel === "Voice_Channel_Id_Here") //don't remove ""
     { 
         // User Joins a voice channel
 
-        textChannel.send(`**<@${newMember.id}> μπήκε στο Waiting For Interview, κάποιος να πάει να τον εξυπηρετήσει <@&752202985978986526>.**`);
+        textChannel.send(`**<@${newMember.id}> μπήκε στο Waiting For Interview, κάποιος να πάει να τον εξυπηρετήσει <@&Role_Admin_Id_Here>, <@&Role_Mod_Id_Here>.**`);
     }    
  });
 
@@ -114,8 +114,8 @@ client.on('voiceStateUpdate', (oldMember, newMember) => {
 
 client.on(`guildMemberAdd`, (member) => {
 
-    const channel = member.guild.channels.cache.get(`567484417556086784`)
-    member.roles.add(`292271236552327168`)
+    const channel = member.guild.channels.cache.get(`Text_Notification_Channel_Id_Here`)
+    member.roles.add(`Join_Member_Role`)
         const embed = new Discord.MessageEmbed()
     .setColor('#00ff00')    
     .setTitle("ℕ𝕖𝕨 𝕄𝕖𝕞𝕓𝕖𝕣")    
