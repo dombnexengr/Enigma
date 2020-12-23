@@ -80,6 +80,8 @@ client.on(`message`, message => {
         client.commands.get(`lock`).execute(message, args);
     } else if (command === `unlock`){
         client.commands.get(`unlock`).execute(message, args);
+    } else if (command === 'reactionrole') {
+        client.commands.get('reactionrole').execute(message, args, Discord, client);
     }
        
 })
